@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap');
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f1f5f9;
+  color: #0f172a;
+  font-family: Heebo, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Leaflet tooltip overrides */
+.leaflet-tooltip {
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+  padding: 4px 8px !important;
+  background: white !important;
+  color: #334155 !important;
+}
+
+.settlement-tooltip {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: #1e293b !important;
+  border-color: #cbd5e1 !important;
+  padding: 2px 6px !important;
+  white-space: nowrap !important;
+  background: white !important;
+}
+
+.poi-tooltip {
+  font-size: 10px !important;
+  color: #64748b !important;
+  border-color: #e2e8f0 !important;
+  padding: 2px 6px !important;
+  white-space: nowrap !important;
+  background: white !important;
+}
+
+.leaflet-tooltip::before {
+  display: none !important;
+}
+
+.poi-icon {
+  background: none !important;
+  border: none !important;
+}

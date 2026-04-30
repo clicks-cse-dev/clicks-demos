@@ -1,0 +1,46 @@
+export interface VisitEntry {
+  site: string;
+  totalEntries: number;
+}
+
+// Source: ביקורים-באתרי-רשות-הטבע-והגנים-2025.xlsx, sheet "כל השנה", מחוז צפון
+export const NORTH_VISITS_2025: VisitEntry[] = [
+  { site: 'מבצר נמרוד', totalEntries: 46332 },
+  { site: 'בניאס', totalEntries: 301240 },
+  { site: 'תל דן', totalEntries: 183099 },
+  { site: 'יהודיה', totalEntries: 87985 },
+  { site: 'משושים', totalEntries: 22655 },
+  { site: 'גמלא', totalEntries: 82697 },
+  { site: 'כורסי', totalEntries: 14728 },
+  { site: 'הבטיחה מגרסה', totalEntries: 132400 },
+  { site: 'סוסיתא', totalEntries: 30057 },
+  { site: 'אכזיב', totalEntries: 109314 },
+  { site: 'ברעם', totalEntries: 20194 },
+  { site: 'חורשת טל', totalEntries: 165181 },
+  { site: 'תל חצור', totalEntries: 13352 },
+  { site: 'יחיעם', totalEntries: 37799 },
+  { site: 'נחל עיון', totalEntries: 50943 },
+  { site: 'החולה', totalEntries: 81965 },
+  { site: 'נחל שניר', totalEntries: 187252 },
+  { site: 'נחל עמוד', totalEntries: 120538 },
+  { site: 'כורזים', totalEntries: 23576 },
+  { site: 'עין אפק', totalEntries: 145025 },
+  { site: 'עין יהודה', totalEntries: 33 },
+  { site: 'ארבל', totalEntries: 118398 },
+  { site: 'חמת טבריה', totalEntries: 81750 },
+  { site: 'כוכב הירדן', totalEntries: 35745 },
+  { site: 'בית אלפא', totalEntries: 14231 },
+  { site: 'בית שאן', totalEntries: 63221 },
+  { site: 'גן השלושה', totalEntries: 395405 },
+  { site: 'מעין חרוד', totalEntries: 197318 },
+  { site: 'ציפורי', totalEntries: 92853 },
+  { site: 'חוות משמר הכרמל', totalEntries: 32964 },
+  { site: 'בית שערים', totalEntries: 70335 },
+  { site: 'מגידו', totalEntries: 43804 },
+  { site: 'חי בר כרמל', totalEntries: 58691 },
+  { site: 'נחל מערות', totalEntries: 60492 },
+  { site: 'תל דור', totalEntries: 207 },
+  { site: 'דור הבונים', totalEntries: 200582 },
+  { site: 'נחל תנינים', totalEntries: 77103 },
+  { site: 'קיסריה', totalEntries: 408200 },
+];
