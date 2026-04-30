@@ -1,0 +1,5 @@
+[build]
+  base = "Tazpit"
+  command = "npm ci && npm run build"
+  publish = "dist"
+
