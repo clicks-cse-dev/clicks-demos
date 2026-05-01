@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { MapContainer, Marker, Polygon, TileLayer, useMapEvents, WMSTileLayer } from 'react-leaflet'
 import type { LatLngExpression } from 'leaflet'
-import clusterLogo from '/Users/amitaizenkot/.cursor/projects/Users-amitaizenkot-code-clicks-demos/assets/image-bd70ce0c-8066-43b6-bc29-3c8621b00b97.png'
+import clusterLogo from './assets/cluster-logo.png'
 import {
   getParcelByGushHelka,
   getParcelByPoint,
