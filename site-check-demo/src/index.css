@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Assistant', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: #eef2f7;
+  color: #0f172a;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.panel h1,
+.panel h2,
+.panel h3 {
+  margin: 0 0 8px;
+}
+
+.panel p {
+  margin: 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 420px);
+  gap: 12px;
+  align-items: start;
+}
+
+.layout > .panel {
+  min-width: 0;
+}
+
+.form {
+  grid-column: 2;
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  direction: rtl;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+label {
+  display: grid;
+  gap: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+input,
+select,
+button {
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  padding: 8px 10px;
+  font: inherit;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+button {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+button:hover:enabled {
+  background: #dbeafe;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.inline-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.help-text {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-main h1 {
+  margin: 0 0 2px;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.title-main p {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.app-logo {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #dbe2ea;
+  background: #f8fafc;
+  padding: 3px;
+}
+
+.logic-chip {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: white;
+  border-color: #1d4ed8;
+  font-weight: 700;
+}
+
+.primary-btn:hover:enabled {
+  background: #1d4ed8;
+}
+
+.logic-box {
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 9px 10px;
+  background: #f8fafc;
+}
+
+.logic-box summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.logic-box ul {
+  margin: 8px 0 0;
+  padding-inline-start: 18px;
+  display: grid;
+  gap: 4px;
+  color: #334155;
+  font-size: 12px;
+}
+
+.map-panel {
+  grid-column: 1;
+  height: 610px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  direction: ltr;
+  z-index: 1;
+}
+
+.map-panel .leaflet-container {
+  border-radius: 12px;
+}
+
+.layer-status {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 11px;
+  color: #334155;
+  z-index: 600;
+  pointer-events: none;
+}
+
+.result {
+  border-radius: 9px;
+  border: 1px solid transparent;
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.result ul {
+  margin: 0;
+  padding-inline-start: 18px;
+  display: grid;
+  gap: 3px;
+  font-size: 0.95rem;
+}
+
+.result-green {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+
+.result-yellow {
+  background: #fefce8;
+  border-color: #fde047;
+}
+
+.result-red {
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .map-panel,
+  .form {
+    grid-column: 1;
+  }
+
+  .title-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .map-panel {
+    height: 470px;
+  }
+}
